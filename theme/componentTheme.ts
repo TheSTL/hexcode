@@ -1,8 +1,8 @@
 export default {
     button: {
         size: {
-            sm: '0px 8px',
-            md: '4px 16px',
+            sm: { padding: '0px 8px' },
+            md: { padding: '4px 16px' },
         },
         variant: {
             solid: {

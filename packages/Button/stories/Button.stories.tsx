@@ -17,7 +17,7 @@ const Template: Story = () => {
 
     console.log(theme);
 
-    return <ThemeProvider theme={theme}> <Button size="sm" variant="solid" > Button</Button > </ThemeProvider>;
+    return <ThemeProvider theme={theme}> <Button size="md" variant="solid" > Button</Button > </ThemeProvider>;
 }
 
 export const Primary = Template.bind({});
