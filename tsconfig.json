@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "allowJs": true,
+    "checkJs": false,
+    "jsx": "react",
+    "declaration": true,
+    "outDir": "./lib",
+    "emitDeclarationOnly": false,
+    "strict": true,
+    "moduleResolution": "node",
+    "rootDirs": ["packages"],
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["packages/**/*.ts", "packages/**/*.tsx"]
+}
