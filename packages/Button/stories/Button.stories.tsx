@@ -1,7 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import { Button } from '../Button';
-import theme from '../../../theme/theme'
+import theme from '../../../token'
 import { ThemeProvider } from 'styled-components';
 
 
@@ -15,9 +15,7 @@ export default {
 
 const Template: Story = () => {
 
-    console.log(theme);
-
-    return <ThemeProvider theme={theme}> <Button size="md" variant="solid" > Button</Button > </ThemeProvider>;
+    return <ThemeProvider theme={theme}> <Button > Button</Button > </ThemeProvider>;
 }
 
 export const Primary = Template.bind({});

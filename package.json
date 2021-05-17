@@ -1,8 +1,8 @@
 {
-  "name": "@hexcode/core",
+  "name": "hexcode",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "rm -rf lib && rollup -c",
     "storybook": "start-storybook -p 6006",

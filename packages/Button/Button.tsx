@@ -6,9 +6,8 @@ import { Common, CommonProps } from '../constants'
 import ButtonStyle from './ButtonStyle';
 
 interface ButtonProps extends CommonProps, _CSSProps {
-    size: 'sm' | 'md',
-    variant: 'solid' | 'outline',
-    children: string,
+    size?: 'sm' | 'md',
+    variant?: 'solid' | 'outline',
 }
 
 export const Button = styled.button<ButtonProps>`
@@ -25,6 +24,7 @@ ${_css}
 `;
 
 Button.defaultProps = {
-    size: 'md'
+    size: 'md',
+    variant: 'solid',
 }
 
