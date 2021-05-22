@@ -17,12 +17,12 @@ cursor: pointer;
 transition: all 250ms ease 0s;
 `;
 
-export interface ButtonProps extends CommonProps, _CSSProps {
+export interface BaseButtonProps extends CommonProps, _CSSProps {
     size?: 'sm' | 'md',
     colorScheme?: 'blue' | 'red'
 }
 
-export const BaseButton = styled.button<ButtonProps>`
+export const BaseButton = styled.button<BaseButtonProps>`
 ${BaseButtonStyle}
 ${Common}
 ${variant({

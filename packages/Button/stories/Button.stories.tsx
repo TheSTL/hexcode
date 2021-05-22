@@ -28,7 +28,7 @@ const Template: Story = () => {
         <br />
         <br />
         <br />
-        <GhostButton colorScheme="red"> Ghost button</GhostButton>
+        <GhostButton colorScheme="blue"> Ghost button</GhostButton>
     </ThemeProvider>;
 }
 

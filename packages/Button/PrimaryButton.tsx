@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get'
 
-import { BaseButton, ButtonProps } from './ButtonBase'
+import { BaseButton, BaseButtonProps } from './ButtonBase'
 
 interface PrimaryButton {
     colorScheme?: string
 }
 
 
-export const PrimaryButton = styled(BaseButton) <PrimaryButton & ButtonProps>`
+export const PrimaryButton = styled(BaseButton) <PrimaryButton & BaseButtonProps>`
 border: none;
 border-radius: ${themeGet('button.radius', '0px')};
 color: ${themeGet('button.color.text.primary', 'black')};

@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get'
 
-import { BaseButton, ButtonProps } from './ButtonBase'
+import { BaseButton, BaseButtonProps } from './ButtonBase'
 
 interface GhostButton {
     colorScheme?: string
 }
 
 
-export const GhostButton = styled(BaseButton) <GhostButton & ButtonProps>`
+export const GhostButton = styled(BaseButton) <GhostButton & BaseButtonProps>`
 border: none;
 border-radius: ${themeGet('button.radius', '0px')};
 color: ${(props) => themeGet(`button.color.text.ghost.${props.colorScheme}`, 'black')};
