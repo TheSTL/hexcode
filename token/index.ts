@@ -1,7 +1,7 @@
-import GlobalTheme from './global';
-import ComponentTheme from './component';
+import globalToken from './global';
+import componentsToken from './components/button';
 
 export default {
-    ...GlobalTheme,
-    ...ComponentTheme
+    ...globalToken,
+    ...componentsToken
 }
