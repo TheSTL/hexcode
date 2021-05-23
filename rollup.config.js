@@ -5,7 +5,7 @@ export default {
   output: {
     dir: "lib",
     format: "esm",
-    sourcemap: true,
+    sourcemap: false,
   },
   plugins: [Ts()],
   preserveModules: true,

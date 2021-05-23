@@ -11,7 +11,7 @@
     "emitDeclarationOnly": false,
     "strict": true,
     "moduleResolution": "node",
-    "rootDirs": ["packages"],
+    "rootDirs": ["packages", "token"],
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
