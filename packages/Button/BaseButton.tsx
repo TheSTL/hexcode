@@ -13,16 +13,22 @@ align-items: center;
 font-family: initial;
 font-weight: 600;
 outline: none;
-cursor: pointer;
 transition: all 250ms ease 0s;
 `;
 
 export interface BaseButtonProps extends CommonProps, _CSSProps {
     size?: 'sm' | 'md',
-    colorScheme?: 'blue' | 'red'
+    colorScheme?: 'blue' | 'red',
+    disabled?: boolean,
+    onClick?: () => void
 }
 
-export const BaseButton = styled.button<BaseButtonProps>`
+export const BaseButton = styled.button.attrs(({ disabled, onClick }) => ({
+    type: 'button',
+    disabled: disabled,
+    onClick: disabled ? undefined : onClick
+})) <BaseButtonProps>`
+cursor: ${(props) => props.disabled ? 'not-allowed' : 'pointer'};
 ${BaseButtonStyle}
 ${Common}
 ${variant({
@@ -31,9 +37,3 @@ ${variant({
 })}
 ${_css}
 `;
-
-BaseButton.defaultProps = {
-    size: 'md',
-    colorScheme: 'blue'
-}
-

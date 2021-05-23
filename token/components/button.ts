@@ -6,23 +6,25 @@ export default {
         radius: '4px',
         border: '1px solid',
         size: {
-            sm: { paddingLeft: space[2], paddingRight: space[2], fontSize: '12px', lineHeight: '1.25em',  },
+            sm: { paddingLeft: space[2], paddingRight: space[2], fontSize: '12px', lineHeight: '1.25em', },
             md: { paddingLeft: space[4], paddingRight: space[4], fontSize: '14px', lineHeight: '1.92em', },
         },
         color: {
             text: {
-                primary: color.white,
-                secondary: {
+                disabled: '#C1C6CE',
+                solid: color.white,
+                outline: {
                     blue: color.blue[500],
                     red: color.red[500]
                 },
                 ghost: {
                     blue: color.blue[500],
                     red: color.red[500]
-                }
+                },
             },
             background: {
-                primary: {
+                disabled: '#C1C6CE',
+                solid: {
                     blue: {
                         default: color.blue[500],
                         hover: color.blue[550],
@@ -34,7 +36,7 @@ export default {
                         active: color.red[600]
                     },
                 },
-                secondary: {
+                outline: {
                     blue: {
                         default: color.white,
                         hover: color.blue[0],
@@ -60,7 +62,8 @@ export default {
                 },
             },
             border: {
-                secondary: {
+                disabled: '#C1C6CE',
+                outline: {
                     blue: color.blue[500],
                     red: color.red[500],
                 }

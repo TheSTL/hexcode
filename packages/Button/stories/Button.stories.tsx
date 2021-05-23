@@ -1,35 +1,32 @@
-import React from 'react';
+import React from "react";
 import { Story, Meta } from '@storybook/react';
-import { PrimaryButton, BaseButton, SecondaryButton, GhostButton } from '../index';
-import theme from '../../../token'
-import { ThemeProvider } from 'styled-components';
+import { Button } from '../index';
+import { theme } from '../../../token'
+import { HexcodeProvider } from '../../ThemeProvider'
 
 
 export default {
     title: 'Example/Button',
-    component: BaseButton,
+    component: Button,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
 } as Meta;
 
+
 const Template: Story = () => {
 
-    return <ThemeProvider theme={theme}>
-        <BaseButton>Base Button </BaseButton>
+    return <HexcodeProvider theme={theme}>
+        <Button variant="solid" colorScheme="blue"> Button </Button>
         <br />
         <br />
         <br />
-        <PrimaryButton colorScheme="blue" > Primary Button</PrimaryButton >
+        <Button variant="outline" colorScheme="blue"> Button </Button>
         <br />
         <br />
         <br />
-        <SecondaryButton colorScheme="red"> Secodary button</SecondaryButton>
-        <br />
-        <br />
-        <br />
-        <GhostButton colorScheme="blue"> Ghost button</GhostButton>
-    </ThemeProvider>;
+        <Button variant="ghost" colorScheme="blue"> Button </Button>
+    </HexcodeProvider>;
 }
 
 export const Primary = Template.bind({});

@@ -1,14 +1,12 @@
 import { color, Color } from './color';
 import { space, Space } from './spacing';
 
-interface Global {
+export interface Global {
   color: Color,
   space: Space
 }
 
-const global: Global = {
+export const global: Global = {
   color,
   space,
 };
-
-export default global;
