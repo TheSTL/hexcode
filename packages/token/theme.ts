@@ -1,9 +1,9 @@
-import { global, Global } from './global';
-import componentsToken from './components/button';
+import { globalToken, globalTokenObject } from './global';
+import { componentsToken, componentsTokenObject } from './components';
 
-export interface Theme extends Global { }
+export interface Theme extends globalTokenObject, componentsTokenObject { }
 
 export const theme = {
-    ...global,
+    ...globalToken,
     ...componentsToken
 }

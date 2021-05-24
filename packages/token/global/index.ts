@@ -1,12 +1,12 @@
-import { color, Color } from './color';
+import { color, ColorObject } from './color';
 import { space, Space } from './spacing';
 
-export interface Global {
-  color: Color,
+export interface globalTokenObject {
+  color: ColorObject,
   space: Space
 }
 
-export const global: Global = {
+export const globalToken: globalTokenObject = {
   color,
   space,
 };

@@ -23,13 +23,13 @@ type ColorScale = {
 
 
 
-export type Color = {
+export type ColorObject = {
     blue: ColorScale,
     red: ColorScale
     white: string
 }
 
-export const color: Color = {
+export const color: ColorObject = {
     blue: {
         50: '#f4f8fe',
         100: '#eaf3fe',
