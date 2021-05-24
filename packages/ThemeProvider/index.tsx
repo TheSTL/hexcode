@@ -26,5 +26,5 @@ export const getTheme = (path: string) => {
     obj = obj[b];
   }
 
-  return obj;
+  return obj? obj : path;
 }
