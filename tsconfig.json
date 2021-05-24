@@ -11,10 +11,10 @@
     "emitDeclarationOnly": false,
     "strict": true,
     "moduleResolution": "node",
-    "rootDirs": ["packages", "token"],
+    "rootDirs": ["packages"],
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["packages/**/*.ts", "packages/**/*.tsx", "packages/ThemeProvider/index.tsx"]
+  "include": ["packages/**/*.ts", "packages/**/*.tsx"]
 }

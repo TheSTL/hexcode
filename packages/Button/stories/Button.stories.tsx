@@ -1,7 +1,7 @@
 import React from "react";
 import { Story, Meta } from '@storybook/react';
 import { Button } from '../index';
-import { theme } from '../../../token'
+import { theme } from '../../token'
 import { HexcodeProvider } from '../../ThemeProvider'
 
 

@@ -1,6 +1,6 @@
 import React, { createContext, useContext, Context, ContextType } from "react";
 import { ThemeProvider } from "styled-components";
-import { theme, Theme } from "../../token";
+import { theme, Theme } from "../token";
 
 export const HexcodeThemeContext: Context<{}> = createContext({});
 
