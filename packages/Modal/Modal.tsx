@@ -9,7 +9,7 @@ export interface ModalProps {
 }
 
 export const Modal: React.FC<ModalProps> = (props) => {
-    const { isOpen, onClose, size, children } = props;
+    const { isOpen, onClose, size = "auto", children } = props;
 
     if (!isOpen) return null
 
