@@ -2,7 +2,6 @@ export interface Other {
     fonts: {
         normal: string,
     },
-    space: string[],
     fontSize: string[],
     lineHeight: string[],
     fontWeights: {
@@ -25,18 +24,6 @@ export const other: Other = {
     fonts: {
         normal: "'proxima-nova', sans-serif",
     },
-    space: [
-        "0px",
-        "4px",
-        "8px",
-        "16px",
-        "20px",
-        "24px",
-        "28px",
-        "32px",
-        "36px",
-        "40px",
-    ],
     fontSize: ["12px", "14px", "16px", "18px", "20px", "22px", "24px"],
     lineHeight: ["16px", "18px", "20px", "22px", "24px", "26px", "28px"],
     fontWeights: {
