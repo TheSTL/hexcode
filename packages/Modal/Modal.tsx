@@ -13,7 +13,7 @@ export const Modal: React.FC<ModalProps> = (props) => {
     if (!isOpen) return null
 
     return <ModalContext.Provider value={{ isOpen, onClose }}>
-        <FocusLock returnFocus>
+        <FocusLock returnFocus >
             {children}
         </FocusLock>
     </ModalContext.Provider>

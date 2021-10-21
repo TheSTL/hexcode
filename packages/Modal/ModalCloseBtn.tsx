@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { useModalContext } from './context';
 
@@ -13,13 +13,7 @@ const CloseBtn = styled.button`
 `
 
 export const ModalCloseBtn: React.FC = () => {
-    const closeBtnRef = useRef<HTMLButtonElement>(null);
     const { onClose } = useModalContext();
 
-    useEffect(() => {
-        closeBtnRef.current && closeBtnRef.current.focus();
-    }, []);
-
-
-    return <CloseBtn ref={closeBtnRef} onClick={onClose}> X </CloseBtn>
+    return <CloseBtn data-autofocus onClick={onClose}> X </CloseBtn>
 }
