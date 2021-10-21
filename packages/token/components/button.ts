@@ -1,9 +1,6 @@
 import { color } from '../global/color';
 import { space } from '../global/spacing';
 
-export interface buttonTokenObject {
-}
-
 export const button = {
     radius: '4px',
     border: '1px solid',

@@ -21,12 +21,17 @@ type ColorScale = {
     1000: string
 }
 
+type BlackColorScale = {
+    550: string
+}
+
 
 
 export type ColorObject = {
     blue: ColorScale,
     red: ColorScale
-    white: string
+    white: string,
+    black: BlackColorScale
 }
 
 export const color: ColorObject = {
@@ -75,4 +80,7 @@ export const color: ColorObject = {
         1000: '#140300'
     },
     white: "#FFFFFF",
+    black: {
+        550: '#333333'
+    }
 };

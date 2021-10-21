@@ -1,7 +1,9 @@
-import { button, buttonTokenObject} from './button';
+import { button } from './button';
+import { modal } from './modal'
 
-export interface componentsTokenObject extends buttonTokenObject {}
+export interface componentsTokenObject { }
 
 export const componentsToken = {
-    button
+    button,
+    modal
 }
