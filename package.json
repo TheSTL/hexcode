@@ -1,6 +1,6 @@
 {
     "name": "hexcode",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "description": "",
     "main": "lib/index.js",
     "scripts": {
@@ -42,6 +42,9 @@
         "rollup": "^2.47.0",
         "rollup-plugin-typescript2": "^0.30.0",
         "typescript": "^4.2.4"
+    },
+    "peerDependencies" : {
+        "react": "^17.0.2"
     },
     "bundlesize": [
         {
