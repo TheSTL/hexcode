@@ -1,39 +1,52 @@
 import React from 'react';
-import { BaseButton, BaseButtonProps } from './BaseButton';
+import styled from 'styled-components';
+import { variant } from 'styled-system';
+import { _css, _CSSProps } from '../_css';
+import { Common, CommonProps } from '../constants';
 import {
   solidVariantStyle,
   ghostVariantStyle,
   outlineVariantStyle,
 } from './ButtonStyle';
-import css from '@styled-system/css';
-import { omitInvalidHtmlProps } from '../utils';
-export interface ButtonProps extends BaseButtonProps {
+import { getTheme } from '../ThemeProvider'
+
+
+export interface BaseButtonProps extends CommonProps, _CSSProps {
+  size?: 'sm' | 'md';
+  colorScheme?: 'blue' | 'red';
   variant?: 'solid' | 'outline' | 'ghost';
+  disabled?: boolean;
+  onClick?: () => void;
 }
+
 const variants = {
   solid: solidVariantStyle,
   ghost: ghostVariantStyle,
   outline: outlineVariantStyle,
 };
 
-export const Button: React.FC<ButtonProps> = (props) => {
-  const { variant, children, size, disabled, _css, ...rest } = props;
-  const btnStyle = variants[variant!](props);
+export const Button = styled.button.attrs(({ disabled, onClick }) => ({
+  type: 'button',
+  disabled: disabled,
+  onClick: disabled ? undefined : onClick,
+}))<BaseButtonProps>((props) => {
+  const btnStyle = variants[props.variant!](props);
 
-  return (
-    <BaseButton
-      _css={css({
-        ...btnStyle,
-        ..._css,
-        ...omitInvalidHtmlProps(rest),
-      })}
-      size={size}
-      disabled={disabled}
-    >
-      {children}
-    </BaseButton>
-  );
-};
+  return ({
+    cursor: props.disabled ? 'not-allowed' : 'pointer',
+    boxSizing: 'border-box',
+    display: 'inline-fex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontWeight: 600,
+    outline: 'none',
+    transition: 'all 250ms ease 0s',
+    ...btnStyle,
+    ...getTheme(`button.size.${props.size}`),
+    ...Common(props),
+    ..._css(props)
+  })
+});
 
 Button.defaultProps = {
   variant: 'solid',
