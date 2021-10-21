@@ -1,4 +1,5 @@
 import React from 'react';
+import FocusLock from 'react-focus-lock';
 import { ModalContext } from './context';
 
 export interface ModalProps {
@@ -12,6 +13,8 @@ export const Modal: React.FC<ModalProps> = (props) => {
     if (!isOpen) return null
 
     return <ModalContext.Provider value={{ isOpen, onClose }}>
-        {children}
+        <FocusLock returnFocus>
+            {children}
+        </FocusLock>
     </ModalContext.Provider>
 }
