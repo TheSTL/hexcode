@@ -15,9 +15,7 @@ export default {
 const Template: Story = () => {
   return (
     <HexcodeProvider theme={theme}>
-      <Button variant="solid" colorScheme="blue" onClick={() => {
-        console.log('yess');
-      }}>
+      <Button variant="solid" colorScheme="blue" >
         Button
       </Button>
       <br />

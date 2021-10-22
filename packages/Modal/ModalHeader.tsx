@@ -7,5 +7,5 @@ export const ModalHeader = styled(Box)`
     font-size: 22px;
     font-weight: bold;
     line-height: 26px;
-    padding: 0 40px 26px 40px
+    padding: 0 40px 16px 40px
 `

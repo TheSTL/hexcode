@@ -13,7 +13,7 @@ import { getTheme } from '../ThemeProvider'
 
 export interface BaseButtonProps extends CommonProps, _CSSProps {
   size?: 'sm' | 'md';
-  colorScheme?: 'blue' | 'red';
+  colorScheme?: 'blue' | 'red' | 'white';
   variant?: 'solid' | 'outline' | 'ghost';
   disabled?: boolean;
   onClick?: () => void;

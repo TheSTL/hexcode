@@ -35,7 +35,7 @@ export const ModalContainer = styled(Box).attrs(() => ({
     background: 'white',
     border: `${getTheme('border[0]')} solid ${getTheme('boxShadow.normal')}`,
     boxShadow: getTheme('boxShadow.normal'),
-
+    ...Common(props)
   })
 })
 

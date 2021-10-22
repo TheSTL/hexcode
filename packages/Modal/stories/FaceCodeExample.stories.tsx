@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Story, Meta } from '@storybook/react';
-import { Modal, ModalOverlay, ModalContainer, ModalCloseBtn, ModalHeader, ModalBody } from '../index';
+import { Modal, ModalContainer, ModalCloseBtn, ModalHeader, ModalBody } from '../index';
 import { Button } from '../../Button'
 import { theme } from '../../token';
 import { HexcodeProvider } from '../../ThemeProvider';
@@ -18,9 +18,8 @@ const Template: Story = () => {
     return (
         <HexcodeProvider theme={theme}>
             <Button onClick={() => setOpen(true)}> Toggle modal</Button>
-            <Modal isOpen={isOpen} onClose={() => { setOpen(false) }}>
-                <ModalOverlay />
-                <ModalContainer>
+            <Modal size="sm" isOpen={isOpen} onClose={() => { setOpen(false) }}>
+                <ModalContainer left="60%" top="60%" >
                     <ModalCloseBtn />
                     <ModalHeader  >
                         Modal title
@@ -34,4 +33,4 @@ const Template: Story = () => {
     );
 };
 
-export const SimpleModal = Template.bind({});
+export const FaceCodeModal = Template.bind({});
