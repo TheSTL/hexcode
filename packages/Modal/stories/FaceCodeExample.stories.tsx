@@ -22,7 +22,7 @@ const Template: Story = () => {
     return (
         <HexcodeProvider theme={theme}>
             <Button onClick={() => setOpen(true)} colorScheme="white" variant="ghost"> Toggle modal</Button>
-            <Modal size="sm" isOpen={isOpen} onClose={() => { setOpen(false) }}>
+            <Modal lockFocus={false} size="sm" isOpen={isOpen} onClose={() => { setOpen(false) }}>
                 <ModalContainer left="30%" top="30%" >
                     <ModalCloseBtn />
                     <ModalHeader  >

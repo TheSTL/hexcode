@@ -11,7 +11,7 @@ import {
 import { getTheme } from '../ThemeProvider'
 
 
-export interface BaseButtonProps extends CommonProps, _CSSProps {
+export interface ButtonProps extends CommonProps, _CSSProps {
   size?: 'sm' | 'md';
   colorScheme?: 'blue' | 'red' | 'white';
   variant?: 'solid' | 'outline' | 'ghost';
@@ -29,7 +29,7 @@ export const Button = styled.button.attrs(({ disabled, onClick }) => ({
   type: 'button',
   disabled: disabled,
   onClick: disabled ? undefined : onClick,
-}))<BaseButtonProps>((props) => {
+}))<ButtonProps>((props) => {
   const btnStyle = variants[props.variant!](props);
 
   return ({
