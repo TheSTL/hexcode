@@ -30,8 +30,7 @@ const Template: Story = () => {
                         modal body
                     </ModalBody>
                     <ModalFooter>
-                        <Button> Save </Button>
-                        <Button variant="ghost"> cancel </Button>
+                        i'm footer
                     </ModalFooter>
                 </ModalContainer>
             </Modal>
