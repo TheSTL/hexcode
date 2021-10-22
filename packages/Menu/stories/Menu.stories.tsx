@@ -29,14 +29,14 @@ const Template: Story = () => {
             item: {
                 color: 'white',
                 'hover': {
-                    background: '#2F89FC'
+                    background: '#6B6E72'
                 },
                 'focus': {
-                    background: '#2F89FC'
+                    background: '#6B6E72'
                 },
                 'active': {
                     background: '#2F89FC',
-                    color: '#3c424c',
+                    color: 'white',
                 }
             }
         }

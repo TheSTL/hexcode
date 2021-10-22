@@ -10,15 +10,7 @@ import { useModalContext } from './context';
 interface ModalContainerProps extends _CSSProps, CommonProps { }
 
 
-export const ModalContainer = styled(Box).attrs(() => ({
-  as: motion.div,
-  style: {
-    x: '-50%', y: '-35%'
-  },
-  animate: {
-    x: '-50%', y: '-50%'
-  }
-}))<ModalContainerProps>((props) => {
+export const ModalContainer = styled(Box)<ModalContainerProps>((props) => {
   const { size } = useModalContext();
 
   return ({
@@ -28,6 +20,7 @@ export const ModalContainer = styled(Box).attrs(() => ({
     flexDirection: 'column',
     left: '50%',
     top: '50%',
+    transform: 'translate(-50%, -50%)',
     padding: '40px 0 40px 0',
     maxWidth: '100vw',
     maxHeight: '100vh',

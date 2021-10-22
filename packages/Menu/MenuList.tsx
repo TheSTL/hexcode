@@ -24,6 +24,7 @@ const List = styled.div`
     display: ${(props) => props.isOpen ? 'inline-flex' : 'none'};
     flex-direction: column;
     padding: 8px 0;
+    border-radius: 4px;
     border: ${() => `${getTheme('menu.list.border')} ${getTheme('menu.list.borderColor')}`};
     box-shadow: ${() => getTheme('menu.list.boxShadow')};
     background: ${() => getTheme('menu.list.background')};
@@ -81,10 +82,18 @@ export const MenuList: React.FC = (props) => {
                 setOpen(false);
         };
 
+        const onEscKeyDown = (e) => {
+            if (e.key === 'Escape') {
+                setOpen(false);
+            }
+        }
+
         window.addEventListener('click', onClickOutside);
+        window.addEventListener('keydown', onEscKeyDown)
 
         return () => {
             window.removeEventListener('click', onClickOutside);
+            window.removeEventListener('keydown', onEscKeyDown)
         }
     }, []);
 

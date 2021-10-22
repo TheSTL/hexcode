@@ -8,8 +8,12 @@ import { HexcodeProvider } from '../../ThemeProvider';
 export default {
     title: 'Example/Modal',
     component: Modal,
-    argTypes: {
-        backgroundColor: { control: 'color' },
+    parameters: {
+        backgrounds: {
+            values: [
+                { name: 'facecode', value: '#1f252e' },
+            ],
+        },
     },
 } as Meta;
 
@@ -17,12 +21,12 @@ const Template: Story = () => {
     const [isOpen, setOpen] = useState(false);
     return (
         <HexcodeProvider theme={theme}>
-            <Button onClick={() => setOpen(true)}> Toggle modal</Button>
+            <Button onClick={() => setOpen(true)} colorScheme="white" variant="ghost"> Toggle modal</Button>
             <Modal size="sm" isOpen={isOpen} onClose={() => { setOpen(false) }}>
-                <ModalContainer left="60%" top="60%" >
+                <ModalContainer left="30%" top="30%" >
                     <ModalCloseBtn />
                     <ModalHeader  >
-                        Modal title
+                        I'm facecode modal
                     </ModalHeader>
                     <ModalBody>
                         modal body
@@ -34,3 +38,7 @@ const Template: Story = () => {
 };
 
 export const FaceCodeModal = Template.bind({});
+
+FaceCodeModal.parameters = {
+    backgrounds: { default: 'facecode' }
+};

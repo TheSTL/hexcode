@@ -48,6 +48,11 @@ export const button = {
                     hover: color.red[50],
                     active: color.red[100]
                 },
+                white: {
+                    default: 'transparent',
+                    hover: '#2F343D',
+                    active: '#3C424C'
+                }
             },
             ghost: {
                 blue: {
@@ -62,8 +67,8 @@ export const button = {
                 },
                 white: {
                     default: 'transparent',
-                    hover: '#3c424c',
-                    active: '#3c424c'
+                    hover: '#2F343D',
+                    active: '#3C424C'
                 }
             },
         },
@@ -79,7 +84,7 @@ export const button = {
         focus: {
             blue: `0px 0px 0px 3px ${color.blue[300]}`,
             red: `0px 0px 0px 3px ${color.red[300]}`,
-            white: `0px 0px 0px 3px #3c424c`,
+            white: `0px 0px 0px 3px ${color.blue[300]}`,
         }
     },
 }

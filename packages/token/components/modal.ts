@@ -4,7 +4,6 @@ export const modal = {
     size: {
         auto: {},
         sm: {
-            height: '220px',
             width: '484px',
         }
     },

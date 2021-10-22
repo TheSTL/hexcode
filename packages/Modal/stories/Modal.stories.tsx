@@ -4,6 +4,7 @@ import { Modal, ModalOverlay, ModalContainer, ModalCloseBtn, ModalHeader, ModalB
 import { Button } from '../../Button'
 import { theme } from '../../token';
 import { HexcodeProvider } from '../../ThemeProvider';
+import { ModalFooter } from '../ModalFooter';
 
 export default {
     title: 'Example/Modal',
@@ -23,11 +24,15 @@ const Template: Story = () => {
                 <ModalContainer>
                     <ModalCloseBtn />
                     <ModalHeader  >
-                        Modal title
+                        I'm assessment title
                     </ModalHeader>
                     <ModalBody>
                         modal body
                     </ModalBody>
+                    <ModalFooter>
+                        <Button> Save </Button>
+                        <Button variant="ghost"> cancel </Button>
+                    </ModalFooter>
                 </ModalContainer>
             </Modal>
         </HexcodeProvider>
